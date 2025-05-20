@@ -1,3 +1,4 @@
 .ansible/collections/ansible_collections/community/okd/plugins/modules/__pycache__/k8s.cpython-311.pyc
 playbook*.json
 ansible-navigator.log
+.nfs*
