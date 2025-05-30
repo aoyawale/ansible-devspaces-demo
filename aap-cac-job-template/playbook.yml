@@ -1,9 +1,9 @@
 ---
-- name: Configure 
+- name: Configure
   hosts: localhost
   gather_facts: false
   tasks:
-    - name: Configure SCM project from git to populate playbooks for job templates. 
+    - name: Configure SCM project from git to populate playbooks for job templates.
       ansible.controller.project:
         name: "Hammer - Demo"
         organization: "Default"
@@ -13,23 +13,23 @@
         update_project: true
         controller_config_file: files/controller_auth
 
-    - name: Add Home Lab inventory to group hosts in later for job execution. 
+    - name: Add Home Lab inventory to group hosts in later for job execution.
       ansible.controller.inventory:
         name: "Home Lab"
         organization: Default
         state: present
         controller_config_file: files/controller_auth
 
-    - name: Create and add hosts into Home Lab inventory. 
+    - name: Create and add hosts into Home Lab inventory.
       ansible.controller.host:
         name: "{{ item }}"
         inventory: "Home Lab"
         enabled: true
-        controller_config_file: files/controller_auth 
+        controller_config_file: files/controller_auth
       loop:
         - hammer-bastion.arsalan.io
 
-    - name: Create Machine credentials for job_template execution. 
+    - name: Create Machine credentials for job_template execution.
       ansible.controller.credential:
         name: chammer-creds
         organization: Default
@@ -37,11 +37,11 @@
         credential_type: Machine
         inputs:
           username: chammer
-          password: 'redhat123'
+          password: "redhat123"
           #ssh_key_data: "{{ lookup('file', 'files/ssh-key') }}"
         controller_config_file: files/controller_auth
 
-    - name: Create the ping hosts job template to run against the aap cluster. 
+    - name: Create the ping hosts job template to run against the aap cluster.
       ansible.controller.job_template:
         name: "Ping Hosts - Demo"
         job_type: run
@@ -51,6 +51,6 @@
         playbook: "playbook.yml"
         forks: 5
         become_enabled: true
-        credentials: 
+        credentials:
           - "chammer-creds"
         controller_config_file: files/controller_auth

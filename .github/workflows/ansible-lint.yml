@@ -8,7 +8,7 @@ on:
       - dev # Replace with your default branch if different
       - prod
   pull_request:
-    branches: 
+    branches:
       - dev
       - prod
 
