@@ -3,5 +3,8 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: Ping.
+    - name: Ping the hosts.
+      ansible.builtin.ping:
+
+    - name: Test webhooks and workflow for demo.
       ansible.builtin.ping:
