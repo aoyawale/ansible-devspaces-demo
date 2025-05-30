@@ -14,3 +14,5 @@
         - `git config --global user.name "Firstname Lastname"`
 
         - Now with git configured try to commit your changes again. 
+
+        - Once commited then sync to the remote repository. 
