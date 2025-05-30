@@ -7,3 +7,10 @@
         - Navigate to the source control tab on the left hand side of the VScode workspace. (Shortcut CTRL+SHIFT+G).
 
         - Enter a commit message to describe your changes and click on `Commit`. 
+
+        - If an error pops  up to configure your Git username and email please run the following.
+
+        - `git config --global user.email "you@example.com"`
+        - `git config --global user.name "Firstname Lastname"`
+
+        - Now with git configured try to commit your changes again. 
