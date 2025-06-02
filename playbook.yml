@@ -6,5 +6,5 @@
     - name: Ping the hosts.
       ansible.builtin.ping:
 
-    - name: Test webhooks and workflow for live demo.
+    - name: Ping again for the live demo. Please work.
       ansible.builtin.ping:
