@@ -6,3 +6,5 @@
     - name: Ping the hosts.
       ansible.builtin.ping:
 
+    - name: Ping again for the live demo. Please work.
+      ansible.builtin.ping:
