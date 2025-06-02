@@ -4,7 +4,7 @@
 ### Tasklist #1:
     1. Explore the demo environment setup for you. 
 
-    2. The magic of all of this demo is the devfile.yaml.
+    2. The magic of this demo is the devfile.yaml.
     - The devfile contains the container configurations for the IDE we're currently running. 
     - The image 'ghcr.io/ansible/ansible-devspaces' contains all of the Ansible dev tools necessary for lint, molecule, navigator, builder and more.
     - You can set requests/limits for the container workspace, env variables and more. 

@@ -1,5 +1,4 @@
 ---
-# cspell: disable=devspaces
 schemaVersion: 2.2.2
 metadata:
   name: hammer-ansible-demo
