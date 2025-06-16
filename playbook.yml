@@ -6,5 +6,3 @@
     - name: Ping the hosts.
       ansible.builtin.ping:
 
-    - name: Ping for flightpath.
-      ansible.builtin.ping:
