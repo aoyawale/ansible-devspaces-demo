@@ -56,13 +56,13 @@
         controller_config_file: files/controller_auth
 
     - name: Launch Ping Hosts - Demo job template. 
-      job_launch:
+      ansible.controller.job_launch:
         job_template: "Ping Hosts - Demo"
         controller_config_file: files/controller_auth
       register: job
 
     - name: Wait for job max 120s
-      job_wait:
+      ansible.controller.job_wait:
         job_id: "{{ job.id }}"
         timeout: 120
         controller_config_file: files/controller_auth
