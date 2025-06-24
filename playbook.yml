@@ -6,5 +6,3 @@
     - name: Ping the hosts.
       ansible.builtin.ping:
 
-    - name: Test before DC event. 
-      ansible.builtin.ping:
