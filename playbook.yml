@@ -6,3 +6,5 @@
     - name: Ping the hosts.
       ansible.builtin.ping:
 
+    - name: DC Automates
+      ansible.builtin.ping:
